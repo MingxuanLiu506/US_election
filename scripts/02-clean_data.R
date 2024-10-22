@@ -1,8 +1,8 @@
 #### Preamble ####
 # Purpose: Cleans the raw plane data recorded by two observers..... [...UPDATE THIS...]
-# Author: Rohan Alexander [...UPDATE THIS...]
-# Date: 6 April 2023 [...UPDATE THIS...]
-# Contact: rohan.alexander@utoronto.ca [...UPDATE THIS...]
+# Author: Mingxuan Liu & Zilin Liu
+# Date: 10-21-2024
+# Contact: 
 # License: MIT
 # Pre-requisites: [...UPDATE THIS...]
 # Any other information needed? [...UPDATE THIS...]
@@ -15,7 +15,7 @@ library(collapse)
 library(arrow)
 
 ## load data
-poll<-read.csv(file = "starter_folder-main/data/01-raw_data/raw_data.csv")
+poll<-read.csv(file = "data/01-raw_data/raw_data.csv")
 
 ## Data cleaning and processing
 poll1<-select(poll,party, answer, candidate_id ,candidate_name, pct ,pollster,state)%>%
@@ -30,6 +30,6 @@ logit_data<-filter(poll1,candidate_name=="Kamala Harris")%>%
   mutate(is_vote=factor(ifelse(vote=="yes",1,0)))
 
 ## export data
-write_parquet(logit_data,"poll_model.parquet")
-write.csv(poll1,"clean_data.csv")
-write.csv(logit_data,"analysis_data.csv")
+write_parquet(logit_data,"data/02-analysis_data/poll_model.parquet")
+write.csv(poll1,"data/02-analysis_data/clean_data.csv")
+write.csv(logit_data,"data/02-analysis_data/analysis_data.csv")

@@ -1,8 +1,8 @@
 poll<-read.csv(file = "F:/president_polls.csv")#### Preamble ####
-# Purpose: Downloads and saves the data from [...UPDATE THIS...]
-# Author: Rohan Alexander [...UPDATE THIS...]
-# Date: 11 February 2023 [...UPDATE THIS...]
-# Contact: rohan.alexander@utoronto.ca [...UPDATE THIS...]
+# Purpose: Downloads and saves the data from poll-of-polls
+# Author: Mingxuan Liu & Zilin Liu
+# Date: 10-21-2024
+# Contact:
 # License: MIT
 # Pre-requisites: [...UPDATE THIS...]
 # Any other information needed? [...UPDATE THIS...]
@@ -11,17 +11,17 @@ poll<-read.csv(file = "F:/president_polls.csv")#### Preamble ####
 #### Workspace setup ####
 
 library(tidyverse)
-# [...UPDATE THIS...]
+
 
 #### Download data ####
-# [...ADD CODE HERE TO DOWNLOAD...]
 
-poll<-read.csv(file = "starter_folder-main/data/01-raw_data/president_polls.csv")
+
+poll<-read.csv(file = "data/01-raw_data/president_polls.csv")
 
 #### Save data ####
-# [...UPDATE THIS...]
+
 # change the_raw_data to whatever name you assigned when you downloaded it.
 
-write_csv(poll, "starter_folder-main/data/01-raw_data/raw_data.csv") 
+write_csv(poll, "data/01-raw_data/raw_data.csv") 
 
 

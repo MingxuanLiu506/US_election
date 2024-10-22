@@ -34,7 +34,7 @@ library(rstanarm)
 library(marginaleffects)
 library(collapse)
 
-poll<-read.csv(file = "starter_folder-main/data/01-raw_data/president_polls.csv")
+poll<-read.csv(file = "data/01-raw_data/president_polls.csv")
 
 poll1<-select(poll,party, answer, candidate_id ,candidate_name, pct ,pollster,state)%>%
   filter(candidate_name=="Kamala Harris" | candidate_name=="Donald Trump" )%>%

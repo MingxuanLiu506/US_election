@@ -1,8 +1,8 @@
 #### Preamble ####
 # Purpose: Models... [...UPDATE THIS...]
-# Author: Rohan Alexander [...UPDATE THIS...]
-# Date: 11 February 2023 [...UPDATE THIS...]
-# Contact: rohan.alexander@utoronto.ca [...UPDATE THIS...]
+# Author: Mingxuan Liu & Zilin Liu
+# Date: 10-21-2024
+# Contact: 
 # License: MIT
 # Pre-requisites: [...UPDATE THIS...]
 # Any other information needed? [...UPDATE THIS...]
@@ -17,7 +17,7 @@ library(collapse)
 library(arrow)
 
 #### Read data ####
-poll1 <- read_csv("starter_folder-main/data/02-analysis_data/clean_data.csv")
+poll1 <- read_csv("data/02-analysis_data/clean_data.csv")
 
 poll1%>%filter(state %in% c("Georgia","Michigan","Pennsylvania","Arizona"))%>%
   ggplot(aes(x = state, fill =candidate_name)) +
