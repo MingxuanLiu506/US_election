@@ -1,7 +1,11 @@
 ---
 title: "Prediction and analysis of 2024 US presidential election"
+author: 
+  - Mingxuan Liu
+  - Zilin Liu
 format: pdf
 editor: visual
+bibliography: references.bib
 ---
 
 ## Abstract
@@ -33,8 +37,10 @@ library(modelsummary)
 library(rstanarm)
 library(marginaleffects)
 library(collapse)
+library(here)
 
-poll<-read.csv(file = "data/01-raw_data/president_polls.csv")
+
+poll<- read.csv(here::here("data/01-raw_data/president_polls.csv"))
 
 poll1<-select(poll,party, answer, candidate_id ,candidate_name, pct ,pollster,state)%>%
   filter(candidate_name=="Kamala Harris" | candidate_name=="Donald Trump" )%>%
