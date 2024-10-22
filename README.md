@@ -19,7 +19,7 @@ The repo is structured as:
 
 ## Statement on LLM usage
 
-The LLM is used. The data part of the code was written with the help of ChatGPT, and the full chat transcript can be found in usage.txt
+The LLM is used. The data part of the code was written with the help of ChatGPT, and the full chat transcript can be found in other/llms_usage/usage.txt
 
 ## Some checks
 
